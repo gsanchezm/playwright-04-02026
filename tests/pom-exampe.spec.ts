@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/omnipizza";
+import { test, markets } from "../fixtures/omnipizza";
 import { Currency } from "../types";
 
 const currencySymbol: Partial<Record<Currency, string>> = {
@@ -17,8 +17,8 @@ test.describe("Fixtures inject POM", () => {
         await catalogPage.expectHasPizzas();
     })
 
-    /* for (const market of markets) {
-        test(`TC-${market.code} - login catalog in market ${market.code}`, { tag: "@smoke" }, async ({ page }) => {
+    for (const market of markets) {
+        test(`TC-${market.code} - login catalog in market ${market.code}`, { tag: "@smoke" }, async ({ loginPage, catalogPage, standardUser }) => {
             // const loginPage = new LoginPage(page);
             // const catalogPage = new CatalogPage(page);
 
@@ -32,5 +32,5 @@ test.describe("Fixtures inject POM", () => {
 
             await catalogPage.expectHasPizzas();        
         })
-    } */
+    }
 })
