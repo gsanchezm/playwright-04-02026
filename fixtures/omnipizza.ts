@@ -42,5 +42,5 @@ export const test = base.extend<PageFixtures, WorkerFixtures>({
     }
 });
 
-export {expect};
+export {expect, markets};
 export type {Market, User};

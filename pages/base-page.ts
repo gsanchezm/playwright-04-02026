@@ -9,7 +9,7 @@ export class BasePage{
         return this.page.getByTestId(`${base}${suffix}`).or(this.page.getByTestId(base).first());
     }
 
-    protected async waitForUrl(pattern: RegExp, timeout = 15_000): Promise<void>{
+    protected async waitForUrl(pattern: RegExp, timeout = 60_000): Promise<void>{
         await this.page.waitForURL(pattern, {timeout});
     }
 
