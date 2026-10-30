@@ -1,3 +1,4 @@
+//This is a message done just to upload the file to the EduardoLeon-rama
 import type {Page, Locator, expect} from "@playwright/test";
 import { LoginPage, CatalogPage} from "../pages";
 import { Market, User } from "../types";
